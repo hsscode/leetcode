@@ -30,7 +30,9 @@
 
 
 
-### Logic :    i will check if open brack and next bracket is not matching and also 
+### Logic :    The logic is to use a stack to track opening brackets and ensure that each closing
+#  bracket matches the most recent opening bracket; if any mismatch or unbalanced bracket is found, 
+# return False; otherwise, check if the stack is empty at the end to confirm all brackets are properly closed.
 
 
 
