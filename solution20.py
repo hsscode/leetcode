@@ -28,18 +28,33 @@
 
 
 
-s = "()[]{}"
+
+
+### Logic :    i will check if open brack and next bracket is not matching and also 
+
+
+
+
+s = "(]"
 
 
 brackets = {'{': '}', '(': ')', '[': ']'}
-        
-stack = []
-        
-for char in s:
-    if char in brackets:
-        stack.append(char)
-    elif not stack or brackets[stack.pop()] != char:
+
+
+# print(not stack)    >>>>> not stack(list) mean is it empty or not , if empty then it will show True 
+stack=[]
+
+
+
+
+for i in s:
+    if i in brackets:
+        stack.append(i)
+    elif not stack or brackets[stack.pop()] != i:
         print(False)
-            
-print(not stack)
+        break
+
+else:
+    print(not stack)
+
 
