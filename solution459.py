@@ -49,9 +49,10 @@ s= 'abcabc'
 doubled_s = s + s
 print(doubled_s)
 
-print(doubled_s[1:-1])
+print(doubled_s[1:-1])  #removing first and last 
 
-print(s in doubled_s[1:-1])
+print(s in doubled_s[1:-1]) #checking if it exist into the orignal string or not 
+ 
 
 
 
