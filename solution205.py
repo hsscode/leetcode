@@ -33,13 +33,14 @@ e={}
 
 #  doing maping  using  zip and making dictionary len
 
-# for i , j in zip(s,t):
-#     e[i]=j
+for i , j in zip(s,t):
+    e[i]=j
 
 
+#we can also use the dict indicing method , both has same result 
 
-for i in range(len(s)):
-    e[s[i]]=t[i]
+# for i in range(len(s)):
+#     e[s[i]]=t[i]
 
 
 
@@ -59,6 +60,3 @@ else:    # in else will check if we can make the new string by using the first s
         print(True)
     else:
         print(False)
-
-
-
