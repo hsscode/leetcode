@@ -1,3 +1,8 @@
+
+#https://leetcode.com/problems/valid-anagram/description/?envType=problem-list-v2&envId=string&difficulty=EASY
+
+
+
 # 242. Valid Anagram
 # Given two strings s and t, return true if t is an anagram  of s, and false otherwise.
 
@@ -33,6 +38,7 @@ t = "car"
 
 if sorted(s) == sorted(t):
     print(True)
-
 else:
     print(False)
+
+    
