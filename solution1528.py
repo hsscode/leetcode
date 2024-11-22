@@ -58,13 +58,20 @@ indices = [4,5,6,7,0,2,1,3]
 
 
 
-z=''
+# logic=  here we can sort it by runnin  the loop from 0 using range and 
+# theusing create a new string using the index and take value from the original string 
 
 
-for i in range(len(indices)):
-    a= indices.index(i)
+# z=''
 
-    z= z+ s[a]
 
-print(z)
+# for i in range(len(indices)):
+#     a= indices.index(i)
+
+#     z= z+ s[a]
+
+# print(z)
+
+
+
 
