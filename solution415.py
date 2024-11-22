@@ -16,8 +16,10 @@
 
 # logic= directly add after converting into int 
 
-# import sys
-# sys.set_int_max_str_digits(10000)
+
+#to handle this error : xceeds the limit (4300 digits) for integer string conversion: value has 5000 digits; use sys.set_int_max_str_digits() to increase the limit 
+import sys
+sys.set_int_max_str_digits(10000)
 
 
 num1 = "1"
