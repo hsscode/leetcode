@@ -29,6 +29,7 @@
 # word = "USA"
 
 word = "FlaG"
+
 # print(word.upper())
 
 if word == word.upper() or  word == word.lower() or  word == word.capitalize() : 
