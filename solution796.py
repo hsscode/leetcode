@@ -55,8 +55,6 @@ goal = "abced"
 
 
 l1=len(s)
-last_word= s[l1-1:l1]
-
 
 for i in range(l1):
     goall= s[1:len(s)] + s[0]
