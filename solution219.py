@@ -1,35 +1,87 @@
-# # https://leetcode.com/problems/happy-number/description/?envType=study-plan-v2&envId=top-interview-150
-
-# # 202. Happy Number
-
-
-# # Example 1:
-# # Input: n = 19
-# # Output: true
+# 219. Contains Duplicate II
+# https://leetcode.com/problems/contains-duplicate-ii/description/?envType=study-plan-v2&envId=top-interview-150
 
 
+# Example 1:
+# Input: nums = [1,2,3,1], k = 3
+# Output: true
+
+# Example 2:
+# Input: nums = [1,0,1,1], k = 1
+# Output: true
+
+# Example 3:
+# Input: nums = [1,2,3,1,2,3], k = 2
+# Output: false
 
 
-# logic: make this number in string so that we can seperate using for loop, then do sq individually and sum,, 
-# when u used this number , put it into the set,,  so that u can check if this no is not already used.
+
+# Logic:
+
+# I have to check if delta of indices is less then or equal to k.
+# These indices are which are same in the array.
 
 
 
-n= 19 
-
-keep= set()
 
 
-while n != 0 and  n not in keep:
-    keep.add(n)
-    total= 0
+# nums = [1,2,3,1,2,3] 
+# k = 2
 
-    for i in str(n):
-        total = total + int(i)**2
-        n= total 
+# nums = [1,2,3,1] 
+# k = 3
 
-if n ==1 :
-    print(True)
+# nums =[1]
+# k =1
+
+
+# for i in range(len(nums)):
+#     for q in range(len(nums)):
+#         if (i==q):
+#             continue
+#         if nums[i] == nums[q] and abs(q-i)<= k:
+#             print(True)
+# else:
+#     print(False) 
+
+
+
+# nums = [1]
+# k=1
+
+# s=0
+
+# for i in range(len(nums)):
+#     for q in range(len(nums)):
+#         if nums[i] == nums[q]:
+#             s=q-i
+# print(abs(s))
+
+# if abs(s)<=k and len(nums)>1:
+#     print(True)
+# else:
+#     print(False)
+
+
+
+
+nums = [1,2,3,1]
+k = 3
+# Output: true
+
+
+
+e = {}
+
+
+for i in range(len(nums)):
+
+    if nums[i] in e:
+        if abs(e[nums[i]] - i) <= k:
+            print(True)
+            break
+    else:
+        e[nums[i]] = i
 
 else:
     print(False)
@@ -53,111 +105,16 @@ else:
 
 
 
+# last_seen= {}
 
 
+# for i in range(len(nums)):
+#     if nums[i] in last_seen:
+#         if i - last_seen[nums[i]] <= k:
+#             print(True)
+#             break
+#     last_seen[nums[i]]=i 
 
-
-
-
-
-
-
-
-
-# n= 19 
-
-# no_check= set()
-
-
-
-# while n !=1 and n not in no_check:
-
-#     total=0
-
-#     for i in str(n):
-#         total= total + int(i)**2 
-#         no_check.add(n)
-#         n = total
-
-# if n==1 :
-#     print(True)
-# else:
-#     print(False)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# # n= 19
-# # p1 = 0
-# # nn= str(n)
-
-# # a=''
-# # b=''
-
-# # i=0
-# # q= len(nn)-1
-
-# # while n != 1:
-# #     n= 19
-# #     a=nn[i]
-# #     b= nn[q]
-# #     p1=int(a)*int(a) + int(b)*int(b)
-# #     p1 = p1
-# #     n= int(p1)
-# #     print(n)
-
-
-# # print(n)
-
-
-# n = 2
-
-# seen = set()
-
-# while n != 1 and n not in seen:
-#     seen.add(n)
-#     total = 0
-#     for digit in str(n):
-#         total += int(digit) ** 2
-#     n = total
-#     print(n)  # To trace the steps
-
-# if n == 1:
-#     print(True)
-# else:
-#     print(False)
-
-
-
-
-# n= 2
-# x=n
-# while x >=10:
-#     sum=0 
-#     while x >0:
-#         r= x % 10 
-#         sum = sum + (r**2)
-#         x= x//10
-#         print(sum)
-#     x= sum 
-# if x==1:
-#     print(True)
 # else:
 #     print(False)
 
